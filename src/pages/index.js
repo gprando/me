@@ -1,21 +1,61 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from "styled-components"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const Post = styled(Link)`
+  color: #000;
+  text-decoration: none;
+  h1 {
+    font-size: 30px;
+    transition: opacity 150ms;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+`
+
+const IndexPage = ({ data }) => {
+  const { allMarkdownRemark } = data
+  const { edges } = allMarkdownRemark
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div>
+        {edges.map(item => {
+          const { node } = item
+          const { frontmatter } = node
+
+          return (
+            <Post to={`/${frontmatter.path}`} key={frontmatter.path}>
+              <h1>{frontmatter.title}</h1>
+            </Post>
+          )
+        })}
+      </div>
+      <Link to="/page-2/">Go to page 2</Link>
+    </Layout>
+  )
+}
+
+export const pageQuery = graphql`
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            date(formatString: "DD/MM")
+            path
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
