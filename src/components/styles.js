@@ -52,13 +52,15 @@ export const Links = styled.div`
 `;
 
 export const Foot = styled.footer`
+
   display: flex;
+  justify-content:center;
   position: relative;
-  bottom: 0;
   margin: 0 auto;
-  
+  color: #fff;
 
   a {
+    padding-left: 10px;
     text-decoration: none;
     color: #5daa2f;
   }
