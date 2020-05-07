@@ -1,11 +1,11 @@
 import React from "react"
-import { AiFillHome } from 'react-icons/ai';
+import { AiFillHome } from 'react-icons/ai'
 import { Link } from 'gatsby';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Container } from '../styles/404';
+import { Container } from '../styles/404'
 
 const NotFoundPage = () => (
   <Layout>

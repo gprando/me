@@ -7,9 +7,9 @@ import {
   AiFillLinkedin,
   AiOutlineWhatsApp,
 
-} from 'react-icons/ai';
+} from 'react-icons/ai'
 
-import { Container } from '../styles/home';
+import { Container } from '../styles/home'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
