@@ -20,8 +20,8 @@ export const Container = styled.div`
 
       &:hover{
         cursor: pointer;
-        width: 500px;
-        height: 500px;
+        width: 320px;
+        height: 320px;
       }
     }
 
