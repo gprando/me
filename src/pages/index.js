@@ -38,7 +38,7 @@ const IndexPage = () => {
 
         <div className="info-pessoal">
           <span> Gabriel Prando</span>
-          <span> Estudante de Egenharia de Computação</span>
+          <span> Estudante de Engenharia de Computação</span>
           <span> CPO na <a href="http://occamengenharia.com/"> occamengenharia</a>.</span>
           <span> Rua Luiz Parzianello nº 62, Fraron, Pato Branco - PR - CEP 85503340</span>
           <span> gprando55@gmail.com</span>
