@@ -41,13 +41,16 @@ const NotFoundPage = () => (
       </ul>
 
 
-      <h1>Certificações / Eventos <AiOutlineSafetyCertificate color="#080" /></h1>
+      <h1>Certificados / Eventos <AiOutlineSafetyCertificate color="#080" /></h1>
       <ul>
+        <li>Semana Omnistack 11 da Rocketseat</li>
         <li>Ministrou treinamentos com foco em desenvolvimento web para membros da OCCAM Engenharia (2020/1);</li>
         <li>Hackathon da OAB (23/11/2019 - 24/11/2019) | 2º lugar;</li>
         <li>Hackathon educação (09/11/2019 - 10/11/2019) | 2 lugar; </li>
+        <li>Semana Omnistack 10 da Rocketseat</li>
         <li>Inventum 2019; </li>
         <li>Transcender (25-26-27/10/2019);</li>
+        <li>Semana Omnistack 09 da Rocketseat</li>
         <li>Ministrou curso de git para membros da OCCAM Engenharia (2019/2); </li>
         <li>Semana Acadêmica de Engenharia de Computação (2018/2); </li>
       </ul>

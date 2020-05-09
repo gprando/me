@@ -5,38 +5,35 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Post = styled(Link)`
-  color: #000;
-  text-decoration: none;
-  h1 {
-    font-size: 30px;
-    transition: opacity 150ms;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-`
+import { Container } from '../styles/blog'
 
-const IndexPage = ({ data }) => {
+
+const BlogPage = ({ data }) => {
   const { allMarkdownRemark } = data
   const { edges } = allMarkdownRemark
 
   return (
-    <Layout>
-      <SEO title="Blog" />
-      <div>
+    <Layout >
+      <Container>
+        <SEO title="Home" />
+        <h1>Últimas Publicações</h1>
         {edges.map(item => {
           const { node } = item
           const { frontmatter } = node
 
+
           return (
-            <Post to={`/${frontmatter.path}`} key={frontmatter.path}>
-              <h1>{frontmatter.title}</h1>
-            </Post>
+            <Link to={`/${frontmatter.path}`} key={frontmatter.path}>
+              <div className="post">
+                <span>{frontmatter.title}</span>
+                <span>publidado em : {frontmatter.date}</span>
+              </div>
+            </Link>
           )
         })}
-      </div>
-      <Link to="/page-2/">Go to page 2</Link>
+
+
+      </Container>
     </Layout>
   )
 }
@@ -49,7 +46,7 @@ export const pageQuery = graphql`
           html
           frontmatter {
             title
-            date(formatString: "DD/MM")
+            date(formatString: "DD/MM/YYYY")
             path
           }
         }
@@ -58,4 +55,27 @@ export const pageQuery = graphql`
   }
 `
 
-export default IndexPage
+export default BlogPage
+
+
+{/* <div>
+          {edges.map(item => {
+            const { node } = item
+            const { frontmatter } = node
+
+            return (
+              <Post to={`/${frontmatter.path}`} key={frontmatter.path}>
+                <h1>{frontmatter.title}</h1>
+              </Post>
+            )
+          })}
+        </div> */}
+
+        // <div className="post">
+        //   <span>Titilo</span>
+        //   <span>publidado em : 20/11/2020</span>
+        // </div>
+        // <div className="post">
+        //   <span>Titilo</span>
+        //   <span>publidado em : 20/11/2020</span>
+        // </div>
