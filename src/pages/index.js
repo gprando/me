@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState, useEffect } from 'react'
+
 import {
   AiFillGithub,
   AiFillGitlab,
@@ -9,18 +10,30 @@ import {
 
 } from 'react-icons/ai'
 
+import axios from 'axios'
+
 import { Container } from '../styles/home'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
 
+  const [perfil, setPerfil] = useState([]);
+
+  useEffect(() => {
+    async function loadPerfil() {
+      const response = await axios.get(`https://api.github.com/users/gprando`);
+      setPerfil(response.data);
+    }
+    loadPerfil();
+  }, []);
+
   return (
     <Layout>
       <SEO title="Home" />
       <Container>
         <div className="imagem">
-          <img src="https://avatars0.githubusercontent.com/u/50037292?s=400&u=c9143ea90d7f81261eba361280672ea210469aa4&v=4" alt="" />
+          <img src={perfil.avatar_url} alt="" />
         </div>
 
         <div className="info-pessoal">
