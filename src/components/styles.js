@@ -56,6 +56,7 @@ export const Foot = styled.footer`
   display: flex;
   justify-content:center;
   position: relative;
+  bottom: 0;
   margin: 0 auto;
   color: #fff;
 

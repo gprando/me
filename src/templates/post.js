@@ -4,6 +4,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import { Container } from './styles'
+
 const IndexPage = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
   const { title, date } = frontmatter
@@ -11,10 +13,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>{title}</h1>
-      <p>{date}</p>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-      <Link to="/">Go to home</Link>
+      <Container>
+        <h1>{title}</h1>
+        <p>{date}</p>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Link to="/blog">Voltar</Link>
+      </Container>
     </Layout>
   )
 }
