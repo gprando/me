@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -15,7 +14,7 @@ const BlogPage = ({ data }) => {
   return (
     <Layout >
       <Container>
-        <SEO title="Home" />
+        <SEO title="Blog" />
         <h1>Últimas Publicações</h1>
         {edges.map(item => {
           const { node } = item
@@ -57,25 +56,3 @@ export const pageQuery = graphql`
 
 export default BlogPage
 
-
-{/* <div>
-          {edges.map(item => {
-            const { node } = item
-            const { frontmatter } = node
-
-            return (
-              <Post to={`/${frontmatter.path}`} key={frontmatter.path}>
-                <h1>{frontmatter.title}</h1>
-              </Post>
-            )
-          })}
-        </div> */}
-
-        // <div className="post">
-        //   <span>Titilo</span>
-        //   <span>publidado em : 20/11/2020</span>
-        // </div>
-        // <div className="post">
-        //   <span>Titilo</span>
-        //   <span>publidado em : 20/11/2020</span>
-        // </div>
