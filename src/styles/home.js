@@ -44,6 +44,7 @@ export const Container = styled.div`
   .links {
     padding: 20px 0;
    a {
+     text-decoration: none;
      padding: 0 10px;
      justify-content: space-between;
      align-self: center;
