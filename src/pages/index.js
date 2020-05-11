@@ -45,12 +45,12 @@ const IndexPage = () => {
         </div>
 
         <div className="links">
-          <a href="https://github.com/gprando" target="_blank"> <AiFillGithub size={36} color="#5daa2f" /></a>
-          <a href="https://gitlab.com/gprando" target="_blank"> <AiFillGitlab size={36} color="#5daa2f" /></a>
-          <a href="https://www.facebook.com/gabriel.prando.399/" target="_blank"> <AiFillFacebook size={36} color="#5daa2f" /></a>
-          <a href="https://www.instagram.com/prando__/" target="_blank"> <AiFillInstagram size={36} color="#5daa2f" /></a>
-          <a href="https://api.whatsapp.com/send?phone=5546999039412" target="_blank"> <AiOutlineWhatsApp size={36} color="#5daa2f" /></a>
-          <a href="https://www.aedin.com/in/gabriel-prando-85201b198/" target="_blank"> <AiFillLinkedin size={36} color="#5daa2f" /></a>
+          <a href="https://github.com/gprando" rel="noopener noreferrer" target="_blank"> <AiFillGithub size={36} color="#5daa2f" /></a>
+          <a href="https://gitlab.com/gprando" rel="noopener noreferrer" target="_blank"> <AiFillGitlab size={36} color="#5daa2f" /></a>
+          <a href="https://www.facebook.com/gabriel.prando.399/" rel="noopener noreferrer" target="_blank"> <AiFillFacebook size={36} color="#5daa2f" /></a>
+          <a href="https://www.instagram.com/prando__/" rel="noopener noreferrer" target="_blank"> <AiFillInstagram size={36} color="#5daa2f" /></a>
+          <a href="https://api.whatsapp.com/send?phone=5546999039412" rel="noopener noreferrer" target="_blank"> <AiOutlineWhatsApp size={36} color="#5daa2f" /></a>
+          <a href="https://www.aedin.com/in/gabriel-prando-85201b198/" rel="noopener noreferrer" target="_blank"> <AiFillLinkedin size={36} color="#5daa2f" /></a>
 
         </div>
 

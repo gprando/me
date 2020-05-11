@@ -14,7 +14,6 @@ const PortfolioPage = ({ data }) => {
 
   const [repositorios, setRepositorios] = useState([]);
   const [perfil, setPerfil] = useState([]);
-  const [starreds, setStarreds] = useState([]);
 
   useEffect(() => {
     async function loadRepositorios() {
@@ -44,7 +43,7 @@ const PortfolioPage = ({ data }) => {
       {repositorios.map(repositorio => {
         if (repositorio.fork === false) {
           return (
-            <a href={`${repositorio.html_url}`} target="_blank" key={repositorio.id}>
+            <a href={`${repositorio.html_url}`} rel="noopener noreferrer" target="_blank" key={repositorio.id}>
               <div className="post">
                 <span>{repositorio.name} ||  {repositorio.stargazers_count}<GoStar />  {repositorio.forks}<GoRepoForked /> </span>
                 <span>Última atualização em : {formatHour(repositorio.updated_at)}</span>
@@ -54,6 +53,7 @@ const PortfolioPage = ({ data }) => {
           )
 
         }
+        return <span />;
       })}
 
 

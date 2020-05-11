@@ -33,6 +33,11 @@ export const Content = styled.div`
 `;
 
 export const Links = styled.div`
+  button {
+    background-color: transparent;
+    border: 0;
+  }
+
   a {
     text-decoration: none;
     padding: 10px 15px;
