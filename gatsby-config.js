@@ -5,6 +5,15 @@ module.exports = {
     author: `@GabrielPrando`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#0F0`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
