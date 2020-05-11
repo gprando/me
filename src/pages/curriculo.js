@@ -1,5 +1,7 @@
 import React from "react"
 
+
+
 import { FaUniversity, FaGripfire } from 'react-icons/fa'
 import { MdWork, MdHttp } from 'react-icons/md'
 import { AiOutlineSafetyCertificate } from 'react-icons/ai'
@@ -31,6 +33,8 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="Currículo" />
     <Container>
+
+
       <h1>Formação Acadêmica <FaUniversity color="#080" /></h1>
       <span>Cursando graduação de Engenharia de Computação.</span>
 
@@ -82,7 +86,7 @@ const NotFoundPage = () => (
         Gosto da área de gerência de projetos e tecnologias. Aficionado em novas tecnologias e em todo o ecossistema por volta do JavaScript.
      </span>
     </Container>
-  </Layout>
+  </Layout >
 )
 
 export default NotFoundPage
