@@ -19,6 +19,14 @@ export const Container = styled.div`
     text-decoration: none;
   }
   
+  .infos {
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    padding-bottom: 30px;
+
+  }
+
   .post {
     display: flex;
     flex-direction: column;

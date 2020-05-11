@@ -7,18 +7,29 @@ import SEO from "../components/seo"
 
 import { Container } from '../styles/portfolio'
 
+import { GoRepoForked, GoStar } from 'react-icons/go'
+
 import formatHour from '../services/formatHour'
 
 const PortfolioPage = ({ data }) => {
 
   const [repositorios, setRepositorios] = useState([]);
+  const [perfil, setPerfil] = useState([]);
+  const [starreds, setStarreds] = useState([]);
 
   useEffect(() => {
     async function loadRepositorios() {
       const response = await axios.get(`https://api.github.com/users/gprando/repos`);
       setRepositorios(response.data);
     }
+
+    async function loadPerfil() {
+      const response = await axios.get(`https://api.github.com/users/gprando`);
+      setPerfil(response.data);
+    }
+
     loadRepositorios();
+    loadPerfil();
   }, []);
 
   return (
@@ -26,17 +37,25 @@ const PortfolioPage = ({ data }) => {
       <Container>
         <SEO title="Portfólio" />
         <h1>Projetos</h1>
+        <div className="infos">
+          <span>Todos os projetos constam no github</span>
+          <span>Projetos públicos : {perfil.public_repos}</span>
+          <span>Seguidores: {perfil.followers}</span>
+          <span>Seguindo: {perfil.following}</span>
+        </div>
         {repositorios.map(repositorio => {
+          if (repositorio.fork === false) {
+            return (
+              <a href={`${repositorio.html_url}`} key={repositorio.id}>
+                <div className="post">
+                  <span>{repositorio.name} ||  {repositorio.forks}<GoStar />  {repositorio.stargazers_count}<GoRepoForked /> </span>
+                  <span>Última atualização em : {formatHour(repositorio.updated_at)}</span>
+                  <span>{repositorio.description}</span>
+                </div>
+              </a>
+            )
 
-          return (
-            <a href={`${repositorio.html_url}`} key={repositorio.id}>
-              <div className="post">
-                <span>{repositorio.name}</span>
-                <span>Última atualização em : {formatHour(repositorio.updated_at)}</span>
-                <span>{repositorio.description}</span>
-              </div>
-            </a>
-          )
+          }
         })}
 
 
