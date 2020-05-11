@@ -8,7 +8,6 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: 900px;
   justify-content: space-between;
-  /* menor que tanto eele vira flex: collun */
 
   h1 {
     padding: 30px;
@@ -23,17 +22,21 @@ export const Container = styled.div`
   .post {
     display: flex;
     flex-direction: column;
-    height: 80px;
+    min-height: 80px;
     width: 500px;
     background: #555;
     margin: 20px;
     border-radius: 5px;
-    transition: background 0.2s;  
+    transition: background 0.35s ;  
     background: #FFF;
     border: 2px solid #4ac959;
 
     &:hover {
       background: #4ac959;
+
+      span:last-child {
+        opacity: 1;
+      }
     }
     
     span {
@@ -48,9 +51,14 @@ export const Container = styled.div`
     span + span {
       font-weight: normal;
       font-size: 12px;
-      
     }
+
+    span:last-child {
+        opacity: 0;
+      }    
   }
+  
+
   @media (max-width: 600px){
     max-width: 550px;
 
@@ -59,6 +67,7 @@ export const Container = styled.div`
       width: 350px;
     }
   } 
+
 `;
 
 

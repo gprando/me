@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react"
-import { graphql } from "gatsby"
 
 import axios from 'axios'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Container } from '../styles/blog'
+import { Container } from '../styles/portfolio'
 
+import formatHour from '../services/formatHour'
 
 const PortfolioPage = ({ data }) => {
 
@@ -32,8 +32,8 @@ const PortfolioPage = ({ data }) => {
             <a href={`${repositorio.html_url}`} key={repositorio.id}>
               <div className="post">
                 <span>{repositorio.name}</span>
+                <span>Última atualização em : {formatHour(repositorio.updated_at)}</span>
                 <span>{repositorio.description}</span>
-                <span>Última atualização em : {repositorio.updated_at}</span>
               </div>
             </a>
           )
@@ -44,23 +44,6 @@ const PortfolioPage = ({ data }) => {
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  {
-    allMarkdownRemark {
-      edges {
-        node {
-          html
-          frontmatter {
-            title
-            date(formatString: "DD/MM/YYYY")
-            path
-          }
-        }
-      }
-    }
-  }
-`
 
 export default PortfolioPage
 
