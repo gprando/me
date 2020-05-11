@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+
 import { Container, Content, Links } from './styles';
 
 
@@ -9,12 +11,14 @@ const Header = () => (
   <Container>
     <Content>
       <nav>
-        <Link to="/">Gabriel Prando</Link>
+        <AniLink paintDrip hex="#333" direction="left" duration={0.35} to="/">
+          Gabriel Prando
+        </AniLink>
       </nav>
       <Links>
-        <Link to="/blog">Blog</Link>
-        <Link to="/curriculo">Curriculo</Link>
-        <Link to="/portfolio">Portifólio</Link>
+        <AniLink swipe top="entry" to="/blog" entryOffset={300}>Blog</AniLink>
+        <AniLink cover bg="#333" duration={0.2} to="/curriculo">Curriculo</AniLink>
+        <AniLink fade to="/portfolio">Portifólio</AniLink>
       </Links>
     </Content>
   </Container>

@@ -15,9 +15,6 @@ const BlogPage = ({ data }) => {
   return (
     <Container>
       <SEO title="Blog" />
-      <AniLink paintDrip to="/" hex="#080" >
-        Go to Page 4
-      </AniLink>
 
       <h1>Últimas Publicações</h1>
       {edges.map(item => {
