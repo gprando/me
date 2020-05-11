@@ -24,13 +24,12 @@ import {
 
 } from 'react-icons/di'
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { Container } from '../styles/curriculo'
 
 const NotFoundPage = () => (
-  <Layout>
+  <>
     <SEO title="Currículo" />
     <Container>
 
@@ -86,7 +85,7 @@ const NotFoundPage = () => (
         Gosto da área de gerência de projetos e tecnologias. Aficionado em novas tecnologias e em todo o ecossistema por volta do JavaScript.
      </span>
     </Container>
-  </Layout >
+  </>
 )
 
 export default NotFoundPage

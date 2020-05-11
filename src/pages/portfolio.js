@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 
 import axios from 'axios'
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { Container } from '../styles/portfolio'
@@ -33,34 +32,32 @@ const PortfolioPage = ({ data }) => {
   }, []);
 
   return (
-    <Layout >
-      <Container>
-        <SEO title="Portfólio" />
-        <h1>Projetos</h1>
-        <div className="infos">
-          <span>Todos os projetos constam no github</span>
-          <span>Projetos públicos : {perfil.public_repos}</span>
-          <span>Seguidores: {perfil.followers}</span>
-          <span>Seguindo: {perfil.following}</span>
-        </div>
-        {repositorios.map(repositorio => {
-          if (repositorio.fork === false) {
-            return (
-              <a href={`${repositorio.html_url}`} key={repositorio.id}>
-                <div className="post">
-                  <span>{repositorio.name} ||  {repositorio.forks}<GoStar />  {repositorio.stargazers_count}<GoRepoForked /> </span>
-                  <span>Última atualização em : {formatHour(repositorio.updated_at)}</span>
-                  <span>{repositorio.description}</span>
-                </div>
-              </a>
-            )
+    <Container>
+      <SEO title="Portfólio" />
+      <h1>Projetos</h1>
+      <div className="infos">
+        <span>Todos os projetos constam no github</span>
+        <span>Projetos públicos : {perfil.public_repos}</span>
+        <span>Seguidores: {perfil.followers}</span>
+        <span>Seguindo: {perfil.following}</span>
+      </div>
+      {repositorios.map(repositorio => {
+        if (repositorio.fork === false) {
+          return (
+            <a href={`${repositorio.html_url}`} key={repositorio.id}>
+              <div className="post">
+                <span>{repositorio.name} ||  {repositorio.stargazers_count}<GoStar />  {repositorio.forks}<GoRepoForked /> </span>
+                <span>Última atualização em : {formatHour(repositorio.updated_at)}</span>
+                <span>{repositorio.description}</span>
+              </div>
+            </a>
+          )
 
-          }
-        })}
+        }
+      })}
 
 
-      </Container>
-    </Layout>
+    </Container>
   )
 }
 

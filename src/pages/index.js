@@ -13,7 +13,6 @@ import {
 import axios from 'axios'
 
 import { Container } from '../styles/home'
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -29,7 +28,7 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
       <Container>
         <div className="imagem">
@@ -57,10 +56,7 @@ const IndexPage = () => {
 
 
       </Container>
-
-
-
-    </Layout>
+    </>
   )
 }
 
