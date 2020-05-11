@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { Container } from './styles'
@@ -11,7 +10,7 @@ const IndexPage = ({ data }) => {
   const { title, date } = frontmatter
 
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
       <Container>
         <h1>{title}</h1>
@@ -19,7 +18,7 @@ const IndexPage = ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <Link to="/blog">Voltar</Link>
       </Container>
-    </Layout>
+    </>
   )
 }
 
