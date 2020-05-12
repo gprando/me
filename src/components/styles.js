@@ -53,6 +53,11 @@ export const Links = styled.div`
       background: ${darken(-0.2, '#5daa2f')};
       color: #000;
     }
+
+    &:active {
+      color: #fff;
+    }
+    
   }
 `;
 
