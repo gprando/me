@@ -26,7 +26,7 @@ const BlogPage = ({ data }) => {
           <AniLink cover hex="#555" bg="#555" to={`/${frontmatter.path}`} key={frontmatter.path}>
             <div className="post">
               <span>{frontmatter.title}</span>
-              <span>publidado em : {frontmatter.date}</span>
+              <span>publicado em : {frontmatter.date}</span>
             </div>
           </AniLink>
         )

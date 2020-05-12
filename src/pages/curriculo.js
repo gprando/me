@@ -28,7 +28,7 @@ import SEO from "../components/seo"
 
 import { Container } from '../styles/curriculo'
 
-const NotFoundPage = () => (
+const CurriculoPage = () => (
   <>
     <SEO title="Currículo" />
     <Container>
@@ -46,14 +46,14 @@ const NotFoundPage = () => (
 
       <h1>Certificados / Eventos <AiOutlineSafetyCertificate color="#080" /></h1>
       <ul>
-        <li>Semana Omnistack 11 da Rocketseat</li>
+        <li>Semana Omnistack 11 da Rocketseat;</li>
         <li>Ministrou treinamentos com foco em desenvolvimento web para membros da OCCAM Engenharia (2020/1);</li>
-        <li>Hackathon da OAB (23/11/2019 - 24/11/2019) | 2º lugar;</li>
-        <li>Hackathon educação (09/11/2019 - 10/11/2019) | 2 lugar; </li>
-        <li>Semana Omnistack 10 da Rocketseat</li>
+        <li>Hackathon da OAB Pato Branco (23/11/2019 - 24/11/2019) | 2º lugar;</li>
+        <li>Hackathon da educação Pato Branco (09/11/2019 - 10/11/2019) | 2 lugar; </li>
+        <li>Semana Omnistack 10 da Rocketseat;</li>
         <li>Inventum 2019; </li>
         <li>Transcender (25-26-27/10/2019);</li>
-        <li>Semana Omnistack 09 da Rocketseat</li>
+        <li>Semana Omnistack 09 da Rocketseat;</li>
         <li>Ministrou curso de git para membros da OCCAM Engenharia (2019/2); </li>
         <li>Semana Acadêmica de Engenharia de Computação (2018/2); </li>
       </ul>
@@ -81,11 +81,11 @@ const NotFoundPage = () => (
 
       <h1>Interesses <FaGripfire color="#080" /></h1>
       <span>
-        Além de ser um desenvolvedor Backend, frontend e mobile, sempre buscando novos conhecimentos.
-        Gosto da área de gerência de projetos e tecnologias. Aficionado em novas tecnologias e em todo o ecossistema por volta do JavaScript.
+        Além de ser um desenvolvedor Backend, frontend e mobile, está sempre buscando novos conhecimentos.
+        Gosta da área de gerência de projetos e tecnologias. Aficionado em novas tecnologias e em todo o ecossistema por volta do JavaScript.
      </span>
     </Container>
   </>
 )
 
-export default NotFoundPage
+export default CurriculoPage

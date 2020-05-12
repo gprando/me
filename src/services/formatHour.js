@@ -1,5 +1,5 @@
-import { parseISO, format } from 'date-fns';
-import pt from 'date-fns/locale/pt';
+import { parseISO, format } from 'date-fns'
+import pt from 'date-fns/locale/pt'
 
 export default function formatHour(hour) {
   const hora = parseISO(hour);

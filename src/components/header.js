@@ -16,7 +16,7 @@ const Header = () => (
       <Links>
         <AniLink swipe top="entry" to="/blog" entryOffset={300}>Blog</AniLink>
         <AniLink cover bg="#333" duration={0.2} to="/curriculo">Curriculo</AniLink>
-        <AniLink fade to="/portfolio">Portifólio</AniLink>
+        <AniLink fade to="/portfolio">Portfólio</AniLink>
       </Links>
 
     </Content>
