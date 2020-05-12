@@ -41,19 +41,15 @@ const PortfolioPage = ({ data }) => {
         <span>Seguindo: {perfil.following}</span>
       </div>
       {repositorios.map(repositorio => {
-        if (repositorio.fork === false) {
-          return (
-            <a href={`${repositorio.html_url}`} rel="noopener noreferrer" target="_blank" key={repositorio.id}>
-              <div className="post">
-                <span>{repositorio.name} ||  {repositorio.stargazers_count}<GoStar />  {repositorio.forks}<GoRepoForked /> </span>
-                <span>Última atualização em : {formatHour(repositorio.updated_at)}</span>
-                <span>{repositorio.description}</span>
-              </div>
-            </a>
-          )
-
-        }
-        return <span />;
+        return (
+          <a href={`${repositorio.html_url}`} rel="noopener noreferrer" target="_blank" key={repositorio.id}>
+            <div className="post">
+              <span>{repositorio.name} ||  {repositorio.stargazers_count}<GoStar />  {repositorio.forks}<GoRepoForked /> </span>
+              <span>Última atualização em : {formatHour(repositorio.updated_at)}</span>
+              <span>{repositorio.description}</span>
+            </div>
+          </a>
+        )
       })}
 
 
