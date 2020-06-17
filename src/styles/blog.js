@@ -110,10 +110,11 @@ export const Container = styled.div`
     .items-grid {
       grid-template-columns: repeat(1, 1fr);
       width: 400px;
-    
-      li {
-        width: 200; 
-      }
+      padding: 40px;
+    }
+
+    .items-grid li {
+      width: 200;
     }
 
     .post {
