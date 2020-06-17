@@ -7,7 +7,7 @@ import { Container } from './styles'
 
 const IndexPage = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
-  const { title, date } = frontmatter
+  const { title, date, url } = frontmatter
 
   return (
     <>
@@ -30,6 +30,7 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         path
         title
+        url
       }
     }
   }

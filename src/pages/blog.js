@@ -20,11 +20,12 @@ const BlogPage = ({ data }) => {
       {edges.map(item => {
         const { node } = item
         const { frontmatter } = node
-
+        console.log(node.frontmatter.url)
 
         return (
           <AniLink cover hex="#555" bg="#555" to={`/${frontmatter.path}`} key={frontmatter.path}>
             <div className="post">
+              <img src={frontmatter.url} alt="" />
               <span>{frontmatter.title}</span>
               <span>publicado em : {frontmatter.date}</span>
             </div>
@@ -38,20 +39,21 @@ const BlogPage = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  {
-    allMarkdownRemark {
-      edges {
-        node {
-          html
-          frontmatter {
-            title
-            date(formatString: "DD/MM/YYYY")
-            path
-          }
+{
+  allMarkdownRemark {
+    edges {
+      node {
+        frontmatter {
+          path
+          url
+          title
+          date(formatString: "DD/MM/YYYY")
         }
       }
     }
   }
+}
+
 `
 
 export default BlogPage

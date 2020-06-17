@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               frontmatter {
                 path
+                url
               }
             }
           }
