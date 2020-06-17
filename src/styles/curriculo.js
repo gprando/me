@@ -36,5 +36,15 @@ export const Container = styled.div`
   span {
     padding: 0 0 20px 35px;
   }
- 
-`;
+
+  @media (max-width: 700px){
+    span {
+      margin-left: 25px;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+  }
+
+    `;
