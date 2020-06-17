@@ -24,10 +24,13 @@ export const Container = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     list-style: none;
+    margin: 0 auto;
     img {
       width: 100px;
       height: 50px;
     }
+    margin: 0px auto;
+
     span { 
       color: #fff;
       font-size: 16px;
@@ -41,6 +44,7 @@ export const Container = styled.div`
   width: 300px;
   border-radius: 8px;
   padding: 32px 24px 16px;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
