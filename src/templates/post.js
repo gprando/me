@@ -7,7 +7,7 @@ import { Container } from './styles'
 
 const IndexPage = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
-  const { title, date, url } = frontmatter
+  const { title, date } = frontmatter
 
   return (
     <>

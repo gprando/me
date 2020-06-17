@@ -17,22 +17,25 @@ const BlogPage = ({ data }) => {
       <SEO title="Blog" />
 
       <h1>Últimas Publicações</h1>
-      {edges.map(item => {
-        const { node } = item
-        const { frontmatter } = node
-        console.log(node.frontmatter.url)
 
-        return (
-          <AniLink cover hex="#555" bg="#555" to={`/${frontmatter.path}`} key={frontmatter.path}>
-            <div className="post">
-              <img src={frontmatter.url} alt="" />
-              <span>{frontmatter.title}</span>
+      <ul className="items-grid">
+        {edges.map(item => {
+          const { node } = item
+          const { frontmatter } = node
+
+          return (
+            <AniLink cover hex="#555" bg="#555" to={`/${frontmatter.path}`} key={frontmatter.path}>
+              <li className="post" key={item.path}>
+                <div >
+                  <img src={frontmatter.url} alt={frontmatter.title} />
+                  <span>{frontmatter.title}</span>
+                </div>
+              </li>
               <span>publicado em : {frontmatter.date}</span>
-            </div>
-          </AniLink>
-        )
-      })}
-
+            </AniLink>
+          )
+        })}
+      </ul>
 
     </Container>
   )

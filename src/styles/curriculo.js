@@ -15,7 +15,7 @@ export const Container = styled.div`
     
     li {
       list-style:  lower-greek;
-      color: #aaa;
+      color: #eee;
     }
    
   }
