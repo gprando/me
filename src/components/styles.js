@@ -38,6 +38,22 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
   }
+
+  @media (max-width: 500px) {
+  nav {
+    span {
+      font-size: 10px;
+    }
+  }
+  }
+
+  @media (max-width: 400px) {
+  nav {
+    span {
+      font-size: 8px;
+    }
+  }
+  }
 `;
 
 export const Links = styled.div`
