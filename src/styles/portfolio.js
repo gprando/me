@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #222;
+  background: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   h1 {
     padding: 30px;
-    color: #00e868;
+    color: #4ac959;
   }
 
   a {
@@ -32,12 +32,12 @@ export const Container = styled.div`
     flex-direction: column;
     min-height: 80px;
     width: 500px;
-    background: #555;
+    background: #000;
     margin: 20px;
     border-radius: 5px;
     transition: background 0.35s ;  
     background: #FFF;
-    border: 2px solid #00e868;
+    border: 2px solid #4ac959;
 
     &:hover {
       background: #4ac959;
