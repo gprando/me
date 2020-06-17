@@ -16,7 +16,7 @@ export const Container = styled.div`
       width: 300px;
       height: 300px;
       border-radius: 50%;
-      border: 2px solid ${darken(0.03, '#5daa2f')};
+      border: 2px solid ${darken(0.03, '#00e868')};
 
       &:hover{
         cursor: pointer;
@@ -36,7 +36,7 @@ export const Container = styled.div`
       a {
         padding-left: 4px;
         text-decoration: none;
-        color: #5daa2f;
+        color: #00e868;
       }
     }
   }

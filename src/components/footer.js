@@ -7,7 +7,6 @@ import { Foot } from './styles';
 const Footer = () => (
   <Foot >
     © {new Date().getFullYear()}, Built by
-    {` `}
     <a href="/"> Gabriel Prando</a>
   </Foot>
 )

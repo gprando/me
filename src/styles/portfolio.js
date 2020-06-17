@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   h1 {
     padding: 30px;
-    color: #4ac959;
+    color: #00e868;
   }
 
   a {
@@ -37,7 +37,7 @@ export const Container = styled.div`
     border-radius: 5px;
     transition: background 0.35s ;  
     background: #FFF;
-    border: 2px solid #4ac959;
+    border: 2px solid #00e868;
 
     &:hover {
       background: #4ac959;

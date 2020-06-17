@@ -6,8 +6,12 @@ export const Container = styled.div`
   display:flex;
   flex-direction: column;
 
+  span {
+    margin-left: 200px;
+  }
+
   ul {
-    padding-left: 60px;
+    padding-left: 200px;
     
     li {
       list-style:  lower-greek;

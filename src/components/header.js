@@ -10,9 +10,11 @@ const Header = () => (
     <Content>
       <nav>
         <AniLink paintDrip hex="#333" direction="left" duration={0.35} to="/">
-          Gabriel Prando
+          <span>{`/*  G A B R I E L */`}</span>
+          <span> {`<P R A N D O />`}</span>
         </AniLink>
       </nav>
+
       <Links>
         <AniLink swipe top="entry" to="/blog" entryOffset={300}>Blog</AniLink>
         <AniLink cover bg="#333" duration={0.2} to="/curriculo">Curriculo</AniLink>

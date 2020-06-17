@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Container = styled.div`
-  background: #444;
+  background: #000;
   padding: 0 30px;
 `;
 
@@ -15,9 +15,17 @@ export const Content = styled.div`
   align-items: center;
 
   nav {
+   padding-top: 10px;
+    span {
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
     a { 
     text-decoration:none;
-    color: #5daa2f;
+    color: #00e868;
     font-weight: bold;
   }
   }
@@ -45,7 +53,7 @@ export const Links = styled.div`
     font-weight: bold;
     margin-top: 2px;
     font-size: 12px;
-    color: #5daa2f;
+    color: #00e868;
     transition: background 0.2s;
 
     &:hover {
@@ -73,6 +81,6 @@ export const Foot = styled.footer`
   a {
     padding-left: 10px;
     text-decoration: none;
-    color: #5daa2f;
+    color: #00e868;
   }
 `;
