@@ -46,7 +46,7 @@ const CurriculoPage = () => (
 
       <h1>Certificados / Eventos <AiOutlineSafetyCertificate color="#080" /></h1>
       <ul>
-        <li>Boocamp GoStack 12 (Rocketseat) - junho/agosto 2020</li>
+        <li>Bootcamp GoStack 12 (Rocketseat) - junho/agosto 2020</li>
         <li>Next Level Week 01 (Rocketseat) - junho 2020;</li>
         <li>Semana Omnistack 11 (Rocketseat) - março 2020 ;</li>
         <li>Ministrou treinamentos com foco em desenvolvimento web para membros da OCCAM Engenharia (2020/1);</li>
