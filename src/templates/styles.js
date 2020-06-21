@@ -8,8 +8,10 @@ export const Container = styled.div`
     margin-left: 30px;
   }
 
-  button {
-
+  a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 4px;
     background: #519128;
     border: 0;
     border-radius: 4px;

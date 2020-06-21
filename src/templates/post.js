@@ -1,11 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
-import { createBrowserHistory } from 'history';
+import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 
 import { Container } from './styles'
-
-const history = createBrowserHistory();
 
 const IndexPage = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
@@ -17,9 +14,9 @@ const IndexPage = ({ data }) => {
       <Container>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <p>{date}</p>
-        <button onClick={() => history.back()}>
+        <Link to="/blog">
           Voltar
-        </button>
+        </Link>
       </Container>
     </>
   )
