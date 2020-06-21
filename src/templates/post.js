@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { createBrowserHistory } from 'history';
 import SEO from "../components/seo"
 
@@ -9,7 +9,7 @@ const history = createBrowserHistory();
 
 const IndexPage = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
-  const { title, date } = frontmatter
+  const { date } = frontmatter
 
   return (
     <>
